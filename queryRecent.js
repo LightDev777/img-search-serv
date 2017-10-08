@@ -1,8 +1,7 @@
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 
-var dbUrl = "mongodb://localhost:27017/mydb"; //process.env.PROD_MONGODB;
-var baseHost = "https://img-search-serv.herokuapp.com";
+var dbUrl = process.env.PROD_MONGODB; //"mongodb://localhost:27017/mydb";
 
 //query for the top 10 recent terms searched
 module.exports = function(callback) {
