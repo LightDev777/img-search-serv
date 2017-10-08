@@ -80,4 +80,17 @@ app.get('/latest/search', function(req, res) {
 
 });
 
+app.get('/index', function(req, res) {
+  // if path is on home and no other  string then load the details.html
+    fs.readFile("./details.html", function(err, data) {
+      if (err) {
+        res.writeHead(404, {'Content-Type': 'text/html'});
+        return res.end("404 Not Found");
+      }
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      res.write(data);
+      return res.end();
+    });
+});
+
 app.listen(process.env.PORT || 5000);
