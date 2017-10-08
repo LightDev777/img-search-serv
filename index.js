@@ -80,7 +80,7 @@ app.get('/latest/search', function(req, res) {
 
 });
 
-app.get('/index', function(req, res) {
+app.get('/', function(req, res) {
   // if path is on home and no other  string then load the details.html
     fs.readFile("./details.html", function(err, data) {
       if (err) {
