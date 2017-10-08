@@ -49,8 +49,6 @@ app.get('/search/*', function(req, res) {
         arrayObj.push(img);
     }
 
-    //console.log(arrayObj);
-
     res.writeHead(200, {'Content-Type': 'text/html'});
     for(var i = 0; i < arrayObj.length; i++) {
         res.write('<pre><code>' + JSON.stringify(arrayObj[i], null, 2) + '</code></pre>');

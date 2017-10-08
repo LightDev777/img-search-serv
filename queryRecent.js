@@ -11,7 +11,6 @@ module.exports = function(callback) {
     var mySort = {when:-1};
     db.collection("recents").find().sort(mySort).limit(10).toArray(function(err, result) {
         if (err) throw err;
-        //console.log(typeof result);
         db.close();
         return callback(null, result);
       });

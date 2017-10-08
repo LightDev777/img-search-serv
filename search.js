@@ -15,7 +15,6 @@ module.exports = function(key, count, callback) {
       });
 
       res.on('end', () => {
-        //var json = JSON.parse(data);
         return callback(null, data);
 
       });
