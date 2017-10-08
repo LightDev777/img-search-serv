@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/LightDev777/img-search-serv#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.16.1",
+    "mongodb": "^2.2.31"
   }
 }
